@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--Verydarkblue: hsl(233, 47%, 7%);
+--Darkdesaturatedblue: hsl(244, 38%, 16%);
+--Softviolet: hsl(277, 64%, 61%);
+--White: hsl(0, 0%, 100%);
+--mainparagraph: hsla(0, 0%, 100%, 0.89);
+--statheadings: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+background-color:var(--Verydarkblue) ;
+font-family: 'Lexend Deca',sans-serif;  
+}
+
+h1{
+    color: var(--mainparagraph);
+    margin: 20px 0 20px;
+}
+
+p{
+    font-size: 15px;
+    line-height: 2;
+    color: var(--statheadings);
+  
+}
+
+h3{
+    color: var(--mainparagraph);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+ul li{
+    color: var(--statheadings);
+    /* font-weight: 400; */
+    margin-top: 1em;
+    text-transform: uppercase;
+    line-height: 2em;
+    padding-bottom: 0.5em;
+}
+
+.container{
+    background-color: var(--Darkdesaturatedblue);
+    margin: 50px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.hero{
+    padding: 30px;
+}
+
+.container .card{
+    background: url(images/image-header-mobile.jpg) no-repeat center;
+    /* height: 250px; */
+    max-width: 100%;
+    border-radius: 0 5px  5px 0 ;
+}
+
+.overlay{
+    height: 300px;
+    background-color:hsla(277, 64%, 61%, 0.445);
+    max-width: 100%;
+    border-radius: 0 5px 5px  0;
+}
+
+ul{
+    list-style: none;
+}
+
+.insight{
+    color: var(--Softviolet);
+}
+
+
+.attribution {
+    font-size: 12px; text-align: center;
+    color: var(--White);
+    padding-bottom: 20px;
+    font-family:'Inter', sans-serif;
+ }
+
+.attribution a { 
+    color: var(--Softviolet);
+ }
+
+@media (min-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        max-width: 80%;
+        margin:20px auto;
+        
+    }
+
+    .card{
+        grid-column: 2;
+    }
+    .container .card{
+        
+        height: 100%;
+      
+        
+    }
+    .overlay{
+        height: 100%;
+        grid-column: 2;
+    }
+
+    .hero{
+        display: grid;
+        grid-template-rows:repeat(3,1fr);
+        text-align: left;
+        /* padding: 70px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+         */
+    }
+
+    .hero ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr) ;
+    }
+
+}
