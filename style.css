@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root{
 --Verydarkblue: hsl(233, 47%, 7%);
 --Darkdesaturatedblue: hsl(244, 38%, 16%);
@@ -15,9 +17,12 @@
 --statheadings: hsla(0, 0%, 100%, 0.6);
 }
 
+
+
 body{
 background-color:var(--Verydarkblue) ;
-font-family: 'Lexend Deca',sans-serif;  
+font-family: 'Lexend Deca',sans-serif; 
+margin-top: 150px; 
 }
 
 h1{
@@ -49,23 +54,25 @@ ul li{
 
 .container{
     background-color: var(--Darkdesaturatedblue);
-    margin: 50px 20px;
     border-radius: 5px;
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
     
+  
 }
 
 .hero{
     padding: 30px;
+    margin-left:30px ;
 }
 
 .container .card{
-    background: url(images/image-header-mobile.jpg) no-repeat center;
+    background: url(images/image-header-mobile.jpg) no-repeat center/cover;
     /* height: 250px; */
     max-width: 100%;
     border-radius: 0 5px  5px 0 ;
+    
 }
 
 .overlay{
@@ -89,6 +96,7 @@ ul{
     color: var(--White);
     padding-bottom: 20px;
     font-family:'Inter', sans-serif;
+ 
  }
 
 .attribution a { 
